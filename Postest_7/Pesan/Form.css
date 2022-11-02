@@ -1,0 +1,378 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+:root {
+    --main-color: #2DB7DF;
+    --main2-color: navy;
+    --background-color: white;
+    --background2-color:#000;
+    --banner-color: azure;
+    --banner-gradasi:rgba(45, 183, 223, .75);
+    --footer-color:#333;
+    --text-color:#666;
+}
+.black-mode{
+    --main-color: #06008A;
+    --main2-color: #2DB7DF;
+    --banner-gradasi:rgba(6, 0, 138, .75);
+}
+
+/* Logo Medsos di atas */
+.Medsos {
+    display :flex;
+    align-items: center;
+    padding-left: 150px;
+    line-height: 50px;
+    background-color: var(--main-color);
+}
+.Medsos ul li{
+    display: inline-block;
+    color :var(--background-color);
+    margin-right: 10px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    line-height: 50px;
+}
+.Medsos label{
+    display: inline-block;
+    justify-items: right;
+    padding-left: 70%;
+    line-height: 50px;
+}
+
+.container:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* Header */
+.Mini-text {
+    font-size: 12px;
+    line-height: 0;
+}
+header h1 {
+    float: left;
+    padding: 15px 0;
+    color: var(--main-color);
+}
+header ul {
+    float: right;
+}
+header ul li {
+    align-items: center;
+    display: inline-block;
+}
+header ul li a{
+    padding: 25px 20px;
+    display: inline-block;
+}
+header ul li a:hover{
+    background-color: var(--main2-color);
+    color: var(--background-color);
+}
+header ul li label:hover{
+    background-color:var(--main2-color);
+    color: var(--background-color);
+}
+
+.check-box{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"]{
+    display: none;
+    visibility: hidden;
+}
+
+input[type="checkbox"]:checked ~ .check:before{
+    transform: translateX(20px);
+}
+
+input[type="checkbox"]:checked ~ .check:before{
+    background-color: var(--background2-color);
+    box-shadow: 0 0 0 50000px var(--background-color);
+}
+
+.check:before,
+.check:after {
+    border-radius: 50%;
+    content: '';
+    height: 16px;
+    position: absolute;
+    top: 2px;
+    transition: transform 0.5s ease;
+    width: 16px;
+}
+
+.check:before {
+    background-color: var(--background-color);
+    left: 2px;
+}
+
+.check {
+    background-color:var(--background2-color);
+    border-radius: 20px;
+    cursor: pointer;
+    display: block;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: background-color 0.5s ease-in, 
+    box-shadow 0.5s ease-in;
+
+    width: 40px;
+}
+.active {
+    background-color:var(--main-color);
+    color:var(--background-color);
+}
+/* Banner Tengah */
+.banner {
+    height: 100vh;
+    background-image: url('../Image/Pelabuhan_Utama.jpg');
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.banner::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--banner-gradasi);
+}
+.banner h2{
+    border: 3px solid;
+    font-size: 40px;
+    color: var(--banner-color);
+    z-index: 1;
+    padding: 25px 25px;
+}
+.banner p{
+    color: var(--banner-color);
+    z-index: 1;
+    text-align: center;
+    margin: 10px 0 40px;
+    padding: 10px 0;
+    font-size: 20px;
+}
+.button{
+    z-index: 1;
+    display: inline-block;
+    color:var(--background-color);
+    border: 3px solid var(--background-color);
+    padding: 12px 34px;
+    font-size: 20px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: var(--main2-color);
+    border-color:var(--main2-color);
+}
+section{
+    padding: 50px 25px;
+}
+
+section h3{
+    text-align: center;
+    padding: 20px 0;
+    color:var(--main2-color);
+}
+.about, .service {
+    padding-bottom: 100px;
+}
+.about p{
+    text-align: center;
+    color: var(--text-color);
+    word-spacing: 2px;
+    line-height: 25px;
+}
+.service{
+    background-color: #f9f9f9;
+}
+.box{
+    color:var(--main2-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.box .col-4{
+    width: 54.202vh;
+    padding: 50px;
+    box-sizing: border-box;
+    text-align: center;
+    float: left;
+}
+.icon {
+    width: 30px;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 0px;
+    font-size: 24px;
+    margin: 0;
+}
+.box .col-4 h4{
+    margin: 0; 
+}
+footer{
+    background-color: var(--footer-color);
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    color:var(--background-color);
+}
+.label {
+    background-color: var(--main-color);
+    color: var(--background-color);
+}
+
+.box-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CSS Form */
+/* Men-disabled spinners pada input number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+
+.Formulir {
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+form {
+  background-color: rgb(236, 236, 236);
+  border-radius: 4px;
+  padding: 15px 25px;
+  width: 400px;
+  border: 1px solid #333;
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+}
+
+input:not(#pesan, #hapus) {
+  margin-bottom: 8px;
+  width: 100%;
+  border: 1px solid #333;
+  padding: 3px 5px;
+  outline: none;
+}
+
+input[disabled] {
+  cursor: not-allowed;
+  background-color: rgb(218, 218, 218);
+}
+
+.tombol {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tombol :is(#pesan, #hapus) {
+  cursor: pointer;
+}
+
+.output {
+  display: none;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  width: 400px;
+}
+
+.output h2 {
+  text-align: center;
+}
+
+.output.tampil {
+  display: block;
+  animation: fade 300ms;
+}
+
+.output p:last-child {
+  color: rgb(32, 204, 55);
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.informasi {
+  text-align: center;
+  margin-top: 20px;
+  color: red;
+  display: flex;
+  flex-direction: column;
+}
+
+.informasi span:first-child {
+  margin-bottom: 10px;
+  font-size: inherit;
+}
+
+.informasi span {
+  font-size: 0.95em;
+}
+
+.informasi span > span {
+  color: rgb(13, 182, 36);
+  font-weight: bold;
+}
+
